@@ -1,0 +1,31 @@
+form {
+
+}
+
+form p {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 35px;
+}
+
+form p.w50 {
+	width: 45%;
+
+}
+
+form p.w100 {
+	width: 100%;
+}
+
+form p img {
+	margin: 8px;
+}
+form p input {
+	outline: none;
+	border: none;
+
+	vertical-align: top;
+	padding: 12px;
+	margin-top: 10px;
+	width: 70%;
+}
