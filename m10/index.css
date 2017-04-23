@@ -1,3 +1,13 @@
+header {
+	height: 180px;
+	background-color: blue;
+}
+
+header h1 {
+	display: inline-block;
+	vertical-align: top;
+}
+
 form {
 
 }
