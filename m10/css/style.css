@@ -1,0 +1,114 @@
+/** GENERAL **/
+body {
+	background-image: url("../img/fond.png");
+	font-family: 'Bree Serif', serif;
+}
+
+/** DIV HEADER **/
+div {
+	margin-bottom: 100px;
+	font-size: 2.5rem;
+}
+div img {
+	width: 70px;
+	margin : 20px;
+}
+h1 {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 35px;
+}
+/** NAV **/
+nav a {
+	text-align: center;
+	display: inline-block;
+	margin: 0 50px;
+	float: right;
+	font-size: 1.25rem;
+	text-decoration: none;
+	color: #98989A;
+}
+nav a .fa {
+	display: block;
+}
+
+/** HEADER SECTION **/
+header section {
+	background-image: url("../img/bg_header.png");
+	height: 400px;
+	color: white;
+	text-align: center;
+}
+header section h2 {
+	padding-top: 40px;
+}
+header section p {
+	margin: 50px;
+	line-height: 30px;
+	font-size: 1.125rem;
+}
+header section p a {
+	background-color: #F0245D;
+	text-decoration: none;
+	color: white;
+	border-radius: 20px;
+	padding: 15px;
+}
+/** COMPETENCES & REALISATIONS **/
+main {
+	margin: 0 auto;
+    width: 70%; 
+}
+main h3 {
+	text-align: center;
+	color: #F0245D;
+	border-bottom: solid 1px #F0F1F3;
+	padding-bottom: 20px;
+	font-size: 1.875rem;
+}
+main article div {
+	display: inline-block;
+	width: 28%;
+	text-align: center;
+	color: #767777;
+	font-size: 1.125rem;
+	line-height: 30px;
+	margin: 20px;
+	vertical-align: top;
+}
+
+h4 {
+	font-size: 0.9375rem;
+}
+/** FORM **/
+form {
+
+}
+
+form p {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 35px;
+}
+
+form p.w50 {
+	width: 45%;
+
+}
+
+form p.w100 {
+	width: 100%;
+}
+
+form p img {
+	margin: 8px;
+}
+form p input {
+	outline: none;
+	border: none;
+
+	vertical-align: top;
+	padding: 12px;
+	margin-top: 10px;
+	width: 70%;
+}
