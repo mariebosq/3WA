@@ -5,10 +5,10 @@ body {
 }
 
 /** DIV HEADER **/
-div {
-	margin-bottom: 100px;
-	font-size: 2.5rem;
+header div {
+	width: 50%;
 }
+
 div img {
 	width: 70px;
 	margin : 20px;
@@ -19,11 +19,15 @@ h1 {
 	margin-top: 35px;
 }
 /** NAV **/
+nav {
+	width: 40%;
+	float: right;
+	vertical-align: top;
+}
 nav a {
 	text-align: center;
 	display: inline-block;
-	margin: 0 50px;
-	float: right;
+	margin: 0 20px;
 	font-size: 1.25rem;
 	text-decoration: none;
 	color: #98989A;
@@ -55,7 +59,7 @@ header section p a {
 	padding: 15px;
 }
 /** COMPETENCES & REALISATIONS **/
-main {
+main, aside, small {
 	margin: 0 auto;
     width: 70%; 
 }
@@ -77,12 +81,43 @@ main article div {
 	vertical-align: top;
 }
 
+main article div .fa {
+	border: 2px solid #E5E6E8;
+	border-radius: 50%;
+	padding: 15px;
+	background-color: #F0F1F3;
+}
+
 h4 {
 	font-size: 0.9375rem;
 }
-/** FORM **/
-form {
+/** EXEMPLES DE REALISATIONS **/
+article, aside {
+	line-height: 30px;
+	color: #767777;
+}
+article p a {
+	color : #F0245D;
+	text-decoration: none;
+	margin-left: 10px;
+}
+.oranges, .aqua {
+	width: 40%;
+	float: right;
+}
+h4 {
+	color: #F0245D;
+}
+.reveil, .fleur {
+	width: 40%;
+	float: left;
+	margin-right: 20px;
+}
 
+/** FORM **/
+aside h3 {
+	text-align : center;
+	color: #F0245D;
 }
 
 form p {
@@ -111,4 +146,21 @@ form p input {
 	padding: 12px;
 	margin-top: 10px;
 	width: 70%;
+}
+/** BOUTONS **/
+.button {
+	margin: 0 auto;
+	width: 40%;
+	margin-bottom: 100px;
+}
+#envoyer {
+	background-color: #F0245D;
+	font-size: 1rem;
+	padding: 15px;
+	margin-right: 60px;
+}
+#effacer {
+	background-color: #979797;
+	font-size: 1rem;
+	padding: 15px;
 }
