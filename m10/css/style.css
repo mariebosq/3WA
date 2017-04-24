@@ -121,6 +121,8 @@ main article div .fa {
 	border-radius: 50%;
 	padding: 15px;
 	background-color: #F0F1F3;
+}
+main article div .fa:hover {
 	animation: bounce 0.7s ease infinite;
 	animation: bounce 0.35s ease infinite alternate;
 }
