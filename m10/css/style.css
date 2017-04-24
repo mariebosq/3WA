@@ -2,17 +2,32 @@
 body {
 	background-image: url("../img/fond.png");
 	font-family: 'Bree Serif', serif;
+	font-weight: normal;
 }
 
 /** DIV HEADER **/
-header div {
-	width: 50%;
+header #name {     
+	display: inline-block;
+	margin-left: 180px;
+	transition: 0.3s all ease-in-out;
+} 
+
+header #name:hover {
+	color: #F0245D;
+	transform: scale(1.3);
 }
 
 div img {
 	width: 70px;
 	margin : 20px;
 }
+h2:before {
+	content: "- ";
+}
+h2:after {
+	content: " -";
+}
+
 h1 {
 	display: inline-block;
 	vertical-align: top;
@@ -23,6 +38,12 @@ nav {
 	width: 40%;
 	float: right;
 	vertical-align: top;
+	margin-top: 30px;
+}
+nav a:hover {
+	color: #F0245D;
+	transform: scale(1.3);
+	transform: translateY(15px);
 }
 nav a {
 	text-align: center;
@@ -31,6 +52,8 @@ nav a {
 	font-size: 1.25rem;
 	text-decoration: none;
 	color: #98989A;
+	padding-bottom: 15px;
+	transition: 0.3s all ease-in-out;
 }
 nav a .fa {
 	display: block;
@@ -39,6 +62,7 @@ nav a .fa {
 /** HEADER SECTION **/
 header section {
 	background-image: url("../img/bg_header.png");
+	background-size: 100%;
 	height: 400px;
 	color: white;
 	text-align: center;
@@ -70,6 +94,14 @@ main h3 {
 	padding-bottom: 20px;
 	font-size: 1.875rem;
 }
+main h3:before {
+	content: "- ";
+	color: #F0245D;
+}
+main h3:after {
+	content: " -";
+	color: #F0245D;
+}
 main article div {
 	display: inline-block;
 	width: 28%;
@@ -80,12 +112,21 @@ main article div {
 	margin: 20px;
 	vertical-align: top;
 }
+main article div img {
+	width: 70%;
+}
 
 main article div .fa {
 	border: 2px solid #E5E6E8;
 	border-radius: 50%;
 	padding: 15px;
 	background-color: #F0F1F3;
+	animation: bounce 0.7s ease infinite;
+	animation: bounce 0.35s ease infinite alternate;
+}
+@keyframes bounce {
+     from {transform: translateY(0);}
+     to   {transform: translateY(-20px);}
 }
 
 h4 {
@@ -102,14 +143,14 @@ article p a {
 	margin-left: 10px;
 }
 .oranges, .aqua {
-	width: 40%;
+	width: 60%;
 	float: right;
 }
 h4 {
 	color: #F0245D;
 }
 .reveil, .fleur {
-	width: 40%;
+	width: 60%;
 	float: left;
 	margin-right: 20px;
 }
@@ -117,6 +158,14 @@ h4 {
 /** FORM **/
 aside h3 {
 	text-align : center;
+	color: #F0245D;
+}
+aside h3:before {
+	content: "- ";
+	color: #F0245D;
+}
+aside h3:after {
+	content: " -";
 	color: #F0245D;
 }
 
@@ -127,25 +176,40 @@ form p {
 }
 
 form p.w50 {
-	width: 45%;
+	background-image: url('../img/bg_form_name.svg');
+	background-repeat: no-repeat;
+	width: 39%;
+	padding: 15px;
+	padding-left: 55px;
 
 }
-
+form p.w55 {
+	background-image: url('../img/bg_form_mail.svg');
+	background-repeat: no-repeat;
+	width: 40%;
+	padding: 15px;
+	padding-left: 55px;
+	margin-right: 20px;
+}
 form p.w100 {
-	width: 100%;
+	width: 95%;
+	background-image: url('../img/bg_form_message.svg');
+	background-repeat: no-repeat;
+	padding: 15px;
+	padding-left: 55px;
 }
 
-form p img {
-	margin: 8px;
-}
 form p input {
 	outline: none;
 	border: none;
 
 	vertical-align: top;
 	padding: 12px;
+	padding-left: 70px;
 	margin-top: 10px;
 	width: 70%;
+
+	background-color: transparent;
 }
 /** BOUTONS **/
 .button {
@@ -163,4 +227,58 @@ form p input {
 	background-color: #979797;
 	font-size: 1rem;
 	padding: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+	nav {
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+}
+	header #name {
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+}
+	main article {
+		width: 100%;
+	}
+	main article div {
+		display: block;
+		margin: 0 auto;
+	}
+	#envoyer {
+		margin-right: 0;
+	}
+	form p input {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	nav a {
+		display: block;
+		margin-bottom: 30px;
+	}
+	header section {
+		height: 800px;
+	}
+	main {
+		width: 90%;
+	}
+	main article div {
+		width: 100%;
+	}
+	form p {
+		display: block;
+		margin: 10px;
+	}
+	form p.w50 {
+	width: 100%;
+
+	}
+	#envoyer {
+		margin-bottom: 30px;
+	}
 }
