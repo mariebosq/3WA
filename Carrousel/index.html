@@ -3,9 +3,29 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript</title>
+    <script type="text/javascript" src="slider.js"></script>
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <title>Sliders</title>
 </head>
 <body>
+	<header>
+		<h1>Sliders</h1>
+		<p><a href="#">Barre d'outils</a></p>
+		<nav class="toolbar">
+			<button type="button" name="previous" id="slider-previous"><i class="fa fa-backward"></i></button>
+			<button type="button" name="start" id="slider-toggle"><i class="fa fa-play"></i></button>
+			<button type="button" name="next" id="slider-next"><i class="fa fa-forward"></i></button>
+			<button type="button" name="random" id="slider-random"><i class="fa fa-random" aria-hidden="true"></i>
+</button>
+		</nav>
+	</header>
+	<main>
+		<figure id="slider" class="slider">
+			<img src="images/1.jpg" />
+			<figcaption>OKAYYYY</figcaption>
+		</figure>
+	</main>
 </body>
 </html>
