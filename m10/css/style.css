@@ -275,10 +275,13 @@ form p input {
 	form p {
 		display: block;
 		margin: 10px;
+		width: 95%;
 	}
 	form p.w50 {
-	width: 100%;
-
+		width: 95%;
+	}
+	form p.w55 {
+		width: 95%;
 	}
 	#envoyer {
 		margin-bottom: 30px;
