@@ -3,29 +3,55 @@
 /*************************************************************************************************/
 /* ****************************************** DONNEES ****************************************** */
 /*************************************************************************************************/
-var slides = [
-{ image:'../images/1.jpg', legend:'first image',
- image:'../images/2.jpg', legend:'second image',
- image:'../images/3.jpg', legend:'third image',
- image:'../images/4.jpg', legend:'quatre image',
- image:'../images/5.jpg', legend:'cinq image',
- image:'../images/6.jpg', legend:'six image'
-}]
+var button = document.getElementById('toolbar-toggle');
+var nav = document.querySelector('.toolbar');
+var previous = document.getElementById('slider-previous');
+var next = document.getElementById('slider-next');
+var random = document.getElementById('slider-random');
+var play = document.getElementById('slider-toggle');
 
+var slides = [
+{src:'../images/1.jpg', legend:'first image'},
+{src:'../images/2.jpg', legend:'second image'},
+{src:'../images/3.jpg', legend:'third image'},
+{src:'../images/4.jpg', legend:'quatre image'},
+{src:'../images/5.jpg', legend:'cinq image'},
+{src:'../images/6.jpg', legend:'six image'}
+];
 
 /*************************************************************************************************/
 /* ***************************************** FONCTIONS ***************************************** */
 /*************************************************************************************************/
+
+// Barre de navigation cacher/afficher
 function onClickButton () {
-  button.classList.toggle('hidden');
+  nav.classList.toggle('hidden');
 }
 
+function changePreviousImage () {
 
+}
+
+function changeNextImage () {
+
+}
+
+function changeRandomImage () {
+
+}
+
+function playImage () {
+
+}
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
 
 
 // Installation d'un gestionnaire d'évènement clic sur le bouton.
-var button = document.querySelector('toolbar');
 button.addEventListener('click', onClickButton);
+
+previous.addEventListener('click', changePreviousImage);
+next.addEventListener('click', changeNextImage);
+random.addEventListener('click', changeRandomImage);
+play.addEventListener('click', playImage);
