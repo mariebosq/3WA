@@ -27,15 +27,15 @@ var slides = [
 /*************************************************************************************************/
 
 // Barre de navigation cacher/afficher
-//
-// 
+
 function onClickButton () {
   nav.classList.toggle('hidden');
 }
 
 function changePreviousImage () {
-   if (image = slides[0]) {
-     image === slides[0] + 1;
+  var index = 0;
+   if (image = slides[index]) {
+     image === slides[index] + 1;
    }
 }
 
