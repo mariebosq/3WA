@@ -11,6 +11,8 @@ var next = document.getElementById('slider-next');
 var random = document.getElementById('slider-random');
 var play = document.getElementById('slider-toggle');
 
+var image = document.querySelector('img');
+
 var slides = [
 {src:'../images/1.jpg', legend:'first image'},
 {src:'../images/2.jpg', legend:'second image'},
@@ -30,7 +32,9 @@ function onClickButton () {
 }
 
 function changePreviousImage () {
-
+   if (image = slides[0]) {
+     image === slides[0] + 1;
+   }
 }
 
 function changeNextImage () {
@@ -38,7 +42,7 @@ function changeNextImage () {
 }
 
 function changeRandomImage () {
-  random.classList.toggle('visibility');
+
   return Math.random(slides);
 }
 
@@ -48,7 +52,7 @@ function playImage () {
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
-
+image.classList.add('slides');
 
 // Installation d'un gestionnaire d'évènement clic sur le bouton.
 button.addEventListener('click', onClickButton);
