@@ -4,28 +4,35 @@
     <meta charset="utf-8">
     <title>JavaScript</title>
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <title>Sliders</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/slider.css">
+
+    <!-- Fonctions utilitaires -->
+    <script src="js/utilities.js"></script>
 </head>
 <body>
-	<header>
-		<h1>Sliders</h1>
-		<p><a href="#" id="toolbar-toggle">Barre d'outils</a></p>
-		<nav class="toolbar">
-			<button type="button" name="previous" id="slider-previous"><i class="fa fa-backward"></i></button>
-			<button type="button" name="start" id="slider-toggle"><i class="fa fa-play"></i></button>
-			<button type="button" name="next" id="slider-next"><i class="fa fa-forward"></i></button>
-			<button type="button" name="random" id="slider-random"><i class="fa fa-random" aria-hidden="true"></i>
-</button>
-		</nav>
-	</header>
-	<main>
-		<figure id="slider" class="slider">
-			<img src="images/1.jpg" id="main-image"/>
-			<figcaption>OKAYYYY</figcaption>
-		</figure>
-	</main>
-    <script type="text/javascript" src="js/slider.js"></script>
+    <header>
+        <h1>Sliders, les mondes parallèles ;-)</h1>
+        <nav class="toolbar">
+            <a id="toolbar-toggle" href="#"><i class="fa fa-arrow-right"></i> Barre d'outils</a>
+            <ul class="hide">
+                <li><button id="slider-previous" title="Image précédente"><i class="fa fa-backward"></i></button></li>
+                <li><button id="slider-toggle" title="Démarrer le carrousel"><i class="fa fa-play"></i></button></li>
+                <li><button id="slider-next" title="Image suivante"><i class="fa fa-forward"></i></button></li>
+                <li><button id="slider-random" title="Sélectionner une image aléatoire"><i class="fa fa-random"></i></button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <figure id="slider" class="slider">
+            <img src="" alt="Photo du carrousel">
+            <figcaption></figcaption>
+        </figure>
+    </main>
+
+    <!-- Code principal du carrousel -->
+    <script src="js/slider.js"></script>
 </body>
 </html>
