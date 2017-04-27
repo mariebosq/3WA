@@ -4,6 +4,7 @@
 /* ****************************************** DONNEES ****************************************** */
 /*************************************************************************************************/
 var button = document.getElementById('toolbar-toggle');
+
 var nav = document.querySelector('.toolbar');
 var previous = document.getElementById('slider-previous');
 var next = document.getElementById('slider-next');
@@ -37,7 +38,8 @@ function changeNextImage () {
 }
 
 function changeRandomImage () {
-
+  random.classList.toggle('visibility');
+  return Math.random(slides);
 }
 
 function playImage () {
