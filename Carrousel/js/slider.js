@@ -11,15 +11,16 @@ var next = document.getElementById('slider-next');
 var random = document.getElementById('slider-random');
 var play = document.getElementById('slider-toggle');
 
-var image = document.querySelector('img');
+var mainImage = document.getElementById('main-image');
+var index = 0;
 
 var slides = [
-{src:'../images/1.jpg', legend:'first image'},
-{src:'../images/2.jpg', legend:'second image'},
-{src:'../images/3.jpg', legend:'third image'},
-{src:'../images/4.jpg', legend:'quatre image'},
-{src:'../images/5.jpg', legend:'cinq image'},
-{src:'../images/6.jpg', legend:'six image'}
+{src:'images/1.jpg', legend:'first image'},
+{src:'images/2.jpg', legend:'second image'},
+{src:'images/3.jpg', legend:'third image'},
+{src:'images/4.jpg', legend:'quatre image'},
+{src:'images/5.jpg', legend:'cinq image'},
+{src:'images/6.jpg', legend:'six image'}
 ];
 
 /*************************************************************************************************/
@@ -32,11 +33,24 @@ function onClickButton () {
   nav.classList.toggle('hidden');
 }
 
+function changeMainImageSource(url) {
+  mainImage.src = url
+}
+function changeMainImageLegend() {
+  mainImage.legend = text
+}
+
 function changePreviousImage () {
-  var index = 0;
-   if (image = slides[index]) {
-     image === slides[index] + 1;
-   }
+  var currentImage = slides[index]
+  if (currentImage == slides[0]) {
+    index = 5;
+    changeMainImageSource(slides[index].src)
+    changeMainImageLegend(slides[index].legend)
+  } else {
+    index--;
+    changeMainImageSource(slides[index].src)
+    changeMainImageLegend(slides[index].legend)
+  }
 }
 
 function changeNextImage () {
@@ -54,7 +68,6 @@ function playImage () {
 /*************************************************************************************************/
 /* ************************************** CODE PRINCIPAL *************************************** */
 /*************************************************************************************************/
-image.classList.add('slides');
 
 // Installation d'un gestionnaire d'évènement clic sur le bouton.
 button.addEventListener('click', onClickButton);
