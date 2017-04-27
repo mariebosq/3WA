@@ -13,6 +13,7 @@ var play = document.getElementById('slider-toggle');
 
 var mainImage = document.getElementById('main-image');
 var index = 0;
+var mainLegend = document.getElementById('main-legend');
 
 var slides = [
 {src:'images/1.jpg', legend:'first image'},
@@ -37,7 +38,7 @@ function changeMainImageSource(url) {
   mainImage.src = url
 }
 function changeMainImageLegend() {
-  mainImage.legend = text
+  mainLegend.innerHTML = text
 }
 
 function changePreviousImage () {
@@ -45,11 +46,11 @@ function changePreviousImage () {
   if (currentImage == slides[0]) {
     index = 5;
     changeMainImageSource(slides[index].src)
-    changeMainImageLegend(slides[index].legend)
+    changeMainImageLegend(slides[index].innerHTML)
   } else {
     index--;
     changeMainImageSource(slides[index].src)
-    changeMainImageLegend(slides[index].legend)
+    changeMainImageLegend(slides[index].innerHTML)
   }
 }
 
