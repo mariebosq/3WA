@@ -27,5 +27,5 @@ function onClickButton () {
 
 
 // Installation d'un gestionnaire d'évènement clic sur le bouton.
-var button = document.getElementByClassName('toolbar');
+var button = document.querySelector('toolbar');
 button.addEventListener('click', onClickButton);
