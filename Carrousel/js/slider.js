@@ -27,6 +27,8 @@ var slides = [
 /*************************************************************************************************/
 
 // Barre de navigation cacher/afficher
+//
+// 
 function onClickButton () {
   nav.classList.toggle('hidden');
 }
