@@ -32,6 +32,10 @@
         echo $dictionnaireEn[$clefAtraduire];
       }
     /*}*/
+    $file = 'form.json';
+    $current = file_get_contents($file);
+    file_put_contents($file, json_encode($dictionnaire));
+
     ?>
   </p>
 </div>
