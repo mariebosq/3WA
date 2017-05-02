@@ -1,11 +1,11 @@
 <footer>
   <ul>
-    <li>Accueil</li>
-    <li>Serveur Mutualisé</li>
-    <li>Serveur Dédié</li>
-    <li>Solution "Cloud"</li>
-    <li>Contact</li>
-    <li>Se connecter</li>
+    <li><a href="index.php">Accueil</a></li>
+    <li><a href="mutualise.php">Serveur Mutualisé</a></li>
+    <li><a href="dedie.php">Serveur Dédié</a></li>
+    <li><a href="cloud.php">Solution "Cloud"</a></li>
+    <li><a href="contact.php">Contact</a></li>
+    <li><a href="#">Se connecter</a></li>
   </ul>
 
   <p>
