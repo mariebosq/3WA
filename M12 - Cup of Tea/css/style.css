@@ -58,13 +58,17 @@ main {
 main img {
   width: 100%
 }
-.flexslider ul {
-  list-style-type: none;
-}
-.flexslider img {
-  width: 100%
-}
+/* SLIDER */
 
+
+/* THES */
+#thes {
+  display: flex;
+  justify-content: space-between;
+}
+#thes img {
+  width: 15%;
+}
 
 /* FOOTER */
 /** NAV **/
