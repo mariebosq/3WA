@@ -18,9 +18,9 @@
 		<header>
 			<?php include("php/header.php"); ?>
 		</header>
-		<p id="search">
-      <input type="search" placeholder="Que recherchez-vous ?" name="recherche">
-    </p>
+		<form action="index.php" method="POST">
+      <input type="champ" placeholder="Que recherchez-vous ?" name="recherche">
+    </form>
     <main>
       <h2>Contactez-nous</h2>
       <section>

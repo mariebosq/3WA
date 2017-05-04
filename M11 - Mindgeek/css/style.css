@@ -18,20 +18,21 @@ header > a {
 header nav {
   display: flex;
   flex-direction: row;
+	align-items: center;
 }
 header nav .fa {
   color : #EF7D96;
   display: flex;
   flex-direction: column;
 }
-header nav .fa:hover {
+header nav a:hover .fa {
   color : black;
 }
 header nav a {
   text-decoration: none;
   color: black;
   text-align: center;
-  margin: 50px;
+	margin: 50px;
 }
 header nav a:hover {
   color: #EF7D96;
@@ -57,7 +58,7 @@ input {
   text-transform: uppercase;
   color: #F8BCCA;
 }
-#search {
+form {
     background-color: #EF7D96;
     padding: 10px 30px;
     margin : 0;
@@ -69,10 +70,12 @@ main {
 }
 main h2 {
   text-align: center;
-  border-top-style : dotted;
-  border-right-style: dotted;
-  border-left-style: dotted;
-  border-color: #283B49;
+	border: 1px;
+  border-top-style : dashed;
+  border-right-style: dashed;
+  border-left-style: dashed;
+  border-color: #283B48;
+
   padding : 10px;
   font-family: 'Candal', sans-serif;
 }
@@ -93,8 +96,13 @@ main section article p {
 main section article h3, main section article .fa {
   color : #EF7D96;
 }
+main section article .fa {
+	display: flex;
+	justify-content: center;
+}
 main section article h3 {
   font-family: 'Candal', sans-serif;
+	text-align: center;
 }
 main section article .prix {
   text-align: center;
@@ -102,7 +110,8 @@ main section article .prix {
 }
 /* MAIN CONTACT.PHP */
 .contact {
-  border-top-style: dotted;
+	border: 1px;
+  border-top-style: dashed;
   border-color: #EF7D96;
 }
 .mail p {
@@ -118,6 +127,7 @@ iframe {
 }
 /* MAIN CLOUD.PHP MUTUALISE.PHP DEDIE.PHP */
 .cloud {
+	border: 1px;
   min-height: 100px;
   border-style: dotted;
   margin-bottom: 20px;
@@ -167,13 +177,24 @@ footer ul {
   flex-direction: row;
   justify-content: space-between;
 }
-footer p {
-  padding : 50px;
-  text-align: center;
-  font-size: 0.8em;
-}
 footer ul a {
   color: white;
+}
+
+/* LICENCE *****************************************************************************************/
+small a {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+#licence {
+	display: block;
+	text-align: center;
+	padding: 25px;
+	color: white;
+}
+#licence img {
+	width: 50px;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 1024px) {

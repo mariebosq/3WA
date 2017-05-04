@@ -15,16 +15,14 @@
 	</head>
 	<body>
 		<!--HEADER-->
-		<header>
 			<?php include("php/header.php"); ?>
-		</header>
 		<section id="head">
 			<h1>L'hébergement à prix libre</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Fugiat nulla pariatur. Excepteur sint</p>
 		</section>
-		<p id="search">
+		<form action="index.php" method="POST">
       <input type="champ" placeholder="Que recherchez-vous ?" name="recherche">
-    </p>
+    </form>
 		<!--MAIN CONTENT-->
 		<main>
 			<h2>Notre solution en 3 points</h2>
