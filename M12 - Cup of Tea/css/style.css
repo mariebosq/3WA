@@ -5,6 +5,7 @@
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
+  background-color: #F1F1F1;
 }
 h1, h2, h3 {
   font-family: 'Amaranth', sans-serif;
@@ -71,20 +72,62 @@ main img {
 /* THES */
 #thes {
   clear: both;
-  padding: 20px;
+  padding: 10px;
+  background-color: white;
+  margin : 30px 0;
 }
 #thes h2 {
   text-align: center;
-  color : #90B52C
+  color : #90B52C;
 }
 #thes img {
   width: 15%;
 }
- #thes>aside {
-   display: flex;
-   justify-content: space-between;
- }
+#thes>article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+#thes:hover img {
+  opacity: 0.5;
+}
+#thes img:hover {
+  opacity: 1;
+}
+/* PRESENTATION */
+#presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.type {
+  width: 30%;
+}
+.type>img {
+  width: 70%;
+}
+.type h2 {
+  color: #90B52C;
+}
+.legend {
+  font-weight: bold;
+}
+.bouton {
+  padding: 20px;
+  background-color: #A58A63;
+  color: white;
+  text-transform: uppercase;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.bouton:hover {
+  opacity: 0.5;
+}
 /* FOOTER */
 /** NAV **/
 footer {
