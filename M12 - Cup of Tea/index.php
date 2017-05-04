@@ -17,8 +17,7 @@
 	<script type="text/javascript">
 		$(window).load(function() {
 			$('.flexslider').flexslider({
-				directionNav: false,
-				controlNav: false
+				directionNav: false
 			});
 		});
 	</script>
@@ -30,7 +29,7 @@
 		<main>
 			<h1>C'est Noël, profitez-en !</h1>
 			<img src="img/offre-noel.jpg" alt="Offre de Noel">
-			<p>Pour toute commande effectuée avant le 20 décembre</p>
+			<p id="legend">Pour toute commande effectuée avant le 20 décembre</p>
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
@@ -41,13 +40,14 @@
 		</section>
 
 			<section id="thes">
-				<h2>Choisssez votre thé</h2>
-
-				<img src="img/tea/1.jpg" alt="thé noir">
-				<img src="img/tea/2.jpg" alt="thé vert">
-				<img src="img/tea/3.jpg" alt="Oolong">
-				<img src="img/tea/4.jpg" alt="thé blanc">
-				<img src="img/tea/5.jpg" alt="Rooibos">
+				<h2>Choisissez votre thé</h2>
+					<aside>
+						<img src="img/tea/1.jpg" alt="thé noir">
+						<img src="img/tea/2.jpg" alt="thé vert">
+						<img src="img/tea/3.jpg" alt="Oolong">
+						<img src="img/tea/4.jpg" alt="thé blanc">
+						<img src="img/tea/5.jpg" alt="Rooibos">
+					</aside>
 			</section>
 
 

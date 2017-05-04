@@ -2,9 +2,6 @@
 
 
 /*GLOBAL */
-* {
-  clear: both;
-}
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -62,18 +59,31 @@ main {
 main img {
   width: 100%
 }
+#legend {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
 /* SLIDER */
 .slides {
   padding-left: 0;
 }
 /* THES */
 #thes {
-  display: flex;
-  justify-content: space-between;
+  clear: both;
+  padding: 20px;
+}
+#thes h2 {
+  text-align: center;
+  color : #90B52C
 }
 #thes img {
   width: 15%;
 }
+ #thes>aside {
+   display: flex;
+   justify-content: space-between;
+ }
 
 /* FOOTER */
 /** NAV **/
