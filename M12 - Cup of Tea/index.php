@@ -7,6 +7,7 @@
 		<!-- CSS Vendor -->
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all" />
 		<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
 		<!-- CSS Perso -->
 		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
