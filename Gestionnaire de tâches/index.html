@@ -2,11 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Gestionnaire de tâches :-)</title>
   </head>
   <body>
+    <h1>Gestionnaire de tâches :-)</h1>
 
-    <script type="text/javascript" href="gestion.php">
+    <p>$taskData): ?></p>
+
+    <ul>
+      <li><input type="checkbox" name="retard"/> <strong>- en retard</strong></li>
+      <li><input type="submit" value="Supprimer" /></li>
+    </ul>
+
+    <hr />
+
+    <form class="taches" action="index.php" method="post">
+      <fieldset>
+        <legend>Information sur la tâche</legend>
+
+      <ul>
+        <li>Titre : <input type="text" name="titre" /></li>
+
+        <li>Tâche : <textarea name="tache" rows="8" cols="80"></textarea></li>
+
+        <li>Date de fin : <select name="date" size="1"><option>1</option><option>2</option><option>3</option></select> /
+          <select name="mois" size="1"><option>janvier</option><option>fevrier</option><option>mars</option></select> /
+          <select class="annee" name="1"><option>2017</option><option>2018</option><option>2019</option></select></li>
+
+        <li>Priorité : <input type="radio" name="priorite" id="basse"/> <label for="basse"> Basse</label>
+        <input type="radio" name="priorite" id="normal"/> <label for="normal"> Normale</label>
+        <input type="radio" name="priorite" id="haute"/> <label for="haute"> Haute</label></li>
+
+        <li><input type="submit" value="Ajouter" /></li>
+      </ul>
+
+      </fieldset>
+    </form>
 
     </script>
   </body>
