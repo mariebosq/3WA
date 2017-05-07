@@ -14,6 +14,7 @@ h1, h2, h3 {
 h3 {
   font-size: 20px;
 }
+
 /* HEADER */
 header {
   background-image: url("../img/bg.jpg");
@@ -40,12 +41,15 @@ header div, nav {
   width: 80%;
   margin: 0 auto;
 }
-div>p {
+
+header div p {
   float: right;
 }
-#logo {
+
+header #logo {
   margin-bottom : 30px;
 }
+
 header .fa {
   border-radius: 50%;
   border: 1px solid white;
@@ -70,29 +74,54 @@ main img {
   padding-left: 0;
 }
 /* THES */
-#thes {
+
+.clear {
   clear: both;
-  padding: 10px;
-  background-color: white;
-  margin : 30px 0;
-}
-#thes h2 {
-  text-align: center;
-  color : #90B52C;
-}
-#thes img {
-  width: 15%;
-}
-#thes>article {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
-#thes:hover img {
+#teas {
+  margin: 30px 0;
+}
+
+
+#teas > h2 {
+  text-align: center;
+  color : #90B52C;
+  margin: 0;
+  padding: 30px;
+  background-color: white;
+  display: flex;
+}
+
+#teas h2:before, #teas h2:after {
+  color: white;
+  content: '';
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.8em;
+}
+
+#teas #teas-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  margin: 0;
+  list-style-type: none;
+}
+
+#teas #teas-list h3 {
+  margin: 20px auto;
+}
+
+#teas #teas-list > li {  
+  text-align: center;
+}
+
+#teas #teas-list:hover img {
   opacity: 0.5;
 }
-#thes img:hover {
+#teas #teas-list img:hover {
   opacity: 1;
 }
 /* PRESENTATION */
@@ -105,16 +134,18 @@ main img {
   margin-bottom: 30px;
 }
 .type {
-  width: 30%;
+  width: 40%;
 }
 .type>img {
   width: 70%;
 }
 .type h2 {
   color: #90B52C;
+  display: flex;
 }
 .legend {
   font-weight: bold;
+  font-family: 'Amaranth', sans-serif;
 }
 .bouton {
   padding: 20px;
@@ -127,6 +158,13 @@ main img {
 }
 .bouton:hover {
   opacity: 0.5;
+}
+#presentation .type h2:before, #presentation .type h2:after {
+  color: white;
+  content: '';
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.8em;
 }
 /* FOOTER */
 /** NAV **/

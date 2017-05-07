@@ -7,7 +7,7 @@
 		<!-- CSS Vendor -->
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all" />
 		<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
 		<!-- CSS Perso -->
 		<link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
@@ -19,7 +19,7 @@
 	<script type="text/javascript">
 		$(window).load(function() {
 			$('.flexslider').flexslider({
-				directionNav: false
+				// directionNav: false
 			});
 		});
 	</script>
@@ -38,31 +38,36 @@
 						<li><img src="img/slider/1.jpg" alt="Photo du slider"></li>
 						<li><img src="img/slider/2.jpg" alt="Photo du slider"></li>
 					</ul>
-			</div>
-		</section>
+				</div>
+			</section>
 
-			<section id="thes">
+			<div class="clear"></div>
+
+			<section id="teas">
 				<h2>Choisissez votre thé</h2>
-					<article>
+				<ul id="teas-list">
+					<li>
 						<img src="img/tea/1.jpg" alt="thé noir" class="min">
 						<h3>Thé noir</h3>
-					</article>
-					<article>
+					</li>
+					<li>
 						<img src="img/tea/2.jpg" alt="thé vert" class="min">
 						<h3>Thé vert</h3>
-					</article>
-					<article >
+					</li>
+					<li >
 						<img src="img/tea/3.jpg" alt="Oolong" class="min">
 						<h3>Oolong</h3>
-					</article>
-					<article>
+					</li>
+					<li>
 						<img src="img/tea/4.jpg" alt="thé blanc" class="min">
 						<h3>Thé blanc</h3>
-					</article>
-					<article>
+					</li>
+					<li>
 						<img src="img/tea/5.jpg" alt="Rooibos" class="min">
 						<h3>Rooibos</h3>
-					</article>
+					</li>
+				</ul>
+				
 			</section>
 
 			<section id="presentation">

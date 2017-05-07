@@ -3,9 +3,12 @@
   <img src="img/ribbon.svg" alt="cornerinfo" id="cornerinfo"></p>
 
   <div>
-  <img src="img/logo.png" alt="logo" id="logo"/>
-  <p>Mon panier <i class="fa fa-shopping-cart" aria-hidden="true"></i> 42,00$
-  </p>
+    <img src="img/logo.png" alt="logo" id="logo"/>
+      <p>
+        Mon panier
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        42,00$
+      </p>
   </div>
 
   <nav>
