@@ -1,42 +1,61 @@
-/* FONT FACE */
-
-
 /*GLOBAL */
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
   background-color: #F1F1F1;
 }
+
 h1, h2, h3 {
   font-family: 'Amaranth', sans-serif;
   font-weight: normal;
 }
+
 h3 {
   font-size: 20px;
 }
 
+.clear {
+  clear: both;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.grey {
+  color: grey;
+}
+
+.red {
+  color: red;
+}
 /* HEADER */
 header {
   background-image: url("../img/bg.jpg");
   background-position: center;
   padding-bottom: 30px;
 }
+
 header p:first-child {
   text-align: center;
   background-color: rgba(127, 157, 31,0.15);
 }
-header p, nav>a {
+
+header p, header nav > a {
   color: white;
 }
-#cornerinfo {
+
+header #cornerinfo {
   width: 100px;
   float: right;
 }
-nav {
+
+header nav {
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
 }
+
 header div, nav {
   width: 80%;
   margin: 0 auto;
@@ -56,35 +75,40 @@ header .fa {
   padding: 10px;
 }
 
-/* MAIN */
+/* MAIN INDEX.PHP */
 main {
   width: 80%;
   margin: 0 auto;
 }
+
 main img {
   width: 100%
 }
-#legend {
+
+main #legend {
   text-align: center;
   font-size: 10px;
   margin-bottom: 20px;
 }
+
 /* SLIDER */
-.slides {
+
+main .slides {
   padding-left: 0;
 }
+
 /* THES */
 
 .clear {
   clear: both;
 }
 
-#teas {
+main #teas {
   margin: 30px 0;
 }
 
 
-#teas > h2 {
+main #teas > h2 {
   text-align: center;
   color : #90B52C;
   margin: 0;
@@ -93,7 +117,7 @@ main img {
   display: flex;
 }
 
-#teas h2:before, #teas h2:after {
+main #teas h2:before, #teas h2:after {
   color: white;
   content: '';
   flex: 1;
@@ -101,7 +125,7 @@ main img {
   margin: auto 0.8em;
 }
 
-#teas #teas-list {
+main #teas #teas-list {
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -110,22 +134,24 @@ main img {
   list-style-type: none;
 }
 
-#teas #teas-list h3 {
+main #teas #teas-list h3 {
   margin: 20px auto;
 }
 
-#teas #teas-list > li {  
+main #teas #teas-list > li {  
   text-align: center;
 }
 
-#teas #teas-list:hover img {
+main #teas #teas-list:hover img {
   opacity: 0.5;
 }
-#teas #teas-list img:hover {
+
+main #teas #teas-list img:hover {
   opacity: 1;
 }
 /* PRESENTATION */
-#presentation {
+
+main #presentation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,21 +159,26 @@ main img {
   text-align: center;
   margin-bottom: 30px;
 }
-.type {
+
+main #presentation .type {
   width: 40%;
 }
-.type>img {
+
+main #presentation .type>img {
   width: 70%;
 }
-.type h2 {
+
+main #presentation .type h2 {
   color: #90B52C;
   display: flex;
 }
-.legend {
+
+main #presentation .type .legend {
   font-weight: bold;
   font-family: 'Amaranth', sans-serif;
 }
-.bouton {
+
+main #presentation .type .bouton {
   padding: 20px;
   background-color: #A58A63;
   color: white;
@@ -156,9 +187,11 @@ main img {
   margin: 0 auto;
   margin-bottom: 15px;
 }
-.bouton:hover {
+
+main #presentation .type .bouton:hover {
   opacity: 0.5;
 }
+
 #presentation .type h2:before, #presentation .type h2:after {
   color: white;
   content: '';
@@ -166,6 +199,157 @@ main img {
   border-bottom: groove 2px;
   margin: auto 0.8em;
 }
+
+/* MAIN ABOUT.PHP */
+/* SECTION FONDATEURS */
+#about {
+  background-color: rgb(254, 255, 255);
+  margin-bottom: 40px;
+}
+
+#about h1, #about .fondateur h2 {
+  padding-left: 20px;
+  font-weight: normal;
+}
+
+#about .fondateur h2 {
+  color: #90B52C;
+  display: flex;
+}
+
+#about .fondateur h2:after {
+  color: white;
+  content: '';
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.8em;
+}
+
+#about .fondateur img {
+  width: 45%;
+  padding: 20px;
+}
+
+#about .fondateur #amelie {
+  float: left;
+}
+
+#about .fondateur #xavier {
+  float: right;
+}
+
+#about section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* SECTION CONCEPT */
+#about #concept {
+  padding-bottom: 20px;
+}
+#about #concept .concept {
+  width: 30%;
+}
+
+#about #concept article {
+  width: 40%;
+  text-align: center;
+  padding: 15px;
+}
+
+#about #concept div {
+  display: flex;
+  background-color: rgb(230, 242, 205);
+  padding: 20px;
+}
+
+/* MAIN PRODUCT.PHP */
+#product {
+  margin-bottom: 40px;
+  background-color: rgb(254, 255, 255);
+  padding: 20px;
+}
+
+/* PRODUCT INTRO */
+#product #product-intro .rating {
+  float: right;
+  vertical-align: top;
+  text-align: right;
+  cursor: pointer;
+}
+
+#product #product-intro .strong {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+#product #product-intro .em {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+#product #product-intro #avis {
+  color: #90B52C;
+  font-size: 0.8em;
+}
+
+
+/* PRODUCT DETAIL */
+#product #product-detail {
+  display: flex;
+}
+
+#product #product-detail .product-detail {
+  width: 50%;
+}
+
+#product #product-detail #product-detail2 {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#product #product-detail #neuf-euros {
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+#product #product-detail select {
+  text-transform: none;
+  width: 249px;
+  display: inline-block;
+  height: 40px;
+  padding: 5px 20px;
+}
+
+#product #product-detail .bouton {
+  padding: 20px;
+  background-color: #A58A63;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 50px 0 20px 0;
+
+  width: 249px;
+  align-self: flex-end;
+
+  text-align: center;
+}
+
+#product #product-detail .bouton:hover {
+  opacity: 0.5;
+}
+
+#product #product-detail #envie {
+  color: #90B52C;
+}
+
+#product .remise {
+  font-weight: bold;
+}
+
 /* FOOTER */
 /** NAV **/
 footer {
@@ -173,19 +357,23 @@ footer {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-#paiement {
+
+footer #paiement {
   width: 100%;
   padding: 20px;
   background-color: rgba(76, 95, 11,0.25);
 }
-#paiement .fa {
+
+footer #paiement .fa {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-#paiement .fa, #paiement a {
+
+footer #paiement .fa, #paiement a {
   color: #C8D79A;
 }
+
 /* UL */
 footer>section {
   width: 90%;
@@ -193,24 +381,30 @@ footer>section {
   display: flex;
   flex-direction: row;
 }
+
 footer>section>article {
   width: 30%;
   margin: 0 auto;
   text-align: center;
 }
-.pied ul {
+
+footer .pied ul {
   padding-left: 0;
 }
-.pied ul li {
+
+footer .pied ul li {
   list-style-type: none;
 }
-.pied ul li a {
+
+footer .pied ul li a {
   color: #C8D79A;
 }
+
 footer h3 {
   color: white;
   text-transform: uppercase;
 }
+
 /* LICENCE */
 #licence {
     display: block;
@@ -221,9 +415,11 @@ footer h3 {
     background-color: rgba(76, 95, 11,0.25);
     font-size: 10px;
 }
+
 #licence img {
     width: 50px;
 }
+
 #licence>a {
   color: white;
 }

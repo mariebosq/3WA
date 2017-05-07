@@ -13,9 +13,9 @@
 
   <nav>
     <a href="#">thés</a>
-    <a href="#">grands crus</a>
+    <a href="product.php">grands crus</a>
     <a href="#">accessoires</a>
     <a href="#">épicerie</a>
-    <a href="#">notre histoire</a>
+    <a href="about.php">notre histoire</a>
   </nav>
 </header>
