@@ -4,16 +4,14 @@ var colorPalette = function() {
   this.getColor = "#00000"
 }
 
-colorPalette.prototype.
+//colorPalette.prototype.
 
-function build() {
+//function build() {
 
-}
 
-function onClick() {
 
-}
+//function onClick() {
 
-function getPickedColour() {
 
-}
+
+//function getPickedColour() {

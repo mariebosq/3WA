@@ -1,25 +1,21 @@
-var pen = function(){
-  this.color = "#000";
-  this.size = "thin"
+var Pen = function(){
+  this.colour = "black";
+  this.size = 1;
 }
 
-pen.prototype.setSize = function(size) {
-  this.size = size
+Pen.prototype.setSize = function(size) {
+  this.size = size;
 }
 
-pen.prototype.setColor = function(color) {
-  this.color = color
-
-
-pen.prototype.configure = function(context) {
-  this.context = context
-}
-function configure(context) {
-
+Pen.prototype.setColour = function(c) {
+  this.colour = c;
 }
 
-
+Pen.prototype.configure = function(context) {
+  context.lineWidth = this.size;
+  context.strokeStyle = this.colour;
+}
 
  function setColourAsRgb(red, green, blue) {
-
- }
+  this.colour = 'rgb(' + red + ',' + green + ',' + blue + ')';
+}
