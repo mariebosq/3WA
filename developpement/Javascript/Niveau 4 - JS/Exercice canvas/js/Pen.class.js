@@ -16,6 +16,6 @@ Pen.prototype.configure = function(context) {
   context.strokeStyle = this.colour;
 }
 
- function setColourAsRgb(red, green, blue) {
+Pen.prototype.setColourAsRgb = function(red, green, blue) {
   this.colour = 'rgb(' + red + ',' + green + ',' + blue + ')';
 }

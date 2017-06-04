@@ -6,52 +6,56 @@
 
 
 //propriété pen qui contiendra une référence à l'objet pen
-var Slate = function(){
-  this.canvas = $("#slate");
-  this.context = canvas.getContext('2d');
-  this.currentLocation =  0;
-  this.pen = pen;
+var Slate = function(pen){
+  this.canvas = $("#slate")[0];
+  this.context = this.canvas.getContext('2d');
+  this.currentLocation = null;
   this.isDrawing = false;
+
+  this.context.lineWidth = 5;
+  // this.context.lineJoin = 'round';
+  this.context.lineCap = 'round';
+  // this.context.strokeStyle = 'blue';
+
+  this.canvas.addEventListener("mousedown", this.onMouseDown.bind(this));
+
+  this.pen = pen;
 }
 
-this.clear = function(){
+Slate.prototype.clear = function(){
   this.context = clearRect(0,0, this.canvas.width(), this.canvas.height());
 }
 
-this.getMouseLocation = function(event){
+Slate.prototype.getMouseLocation = function(event){
   var position = {
     x: event.pageX,
     y: event.pageY
   }
-return position;
+  return position;
 }
 
-this.onMouseDown = function(){
+Slate.prototype.onMouseDown = function(event){
+  var position = this.getMouseLocation(event)
+  console.log('Position : ' + position.x + ', ' + position.y)
+
+  this.canvas.addEventListener("mousemove", this.onMouseMove.bind(this));
+  this.canvas.addEventListener("mouseup", this.onMouseUp.bind(this));
   this.isDrawing = true;
+  this.pen.configure(this.context);
   this.currentLocation = this.getMouseLocation(event);
 }
 
-this.onMouseMove = function(){
+Slate.prototype.onMouseMove = function(event){
   if (this.isDrawing) {
-    this.currentLocation = this.getMouseLocation(event);
-
-    var cursorX = this.currentLocation.x;
-    var cursorY = this.currentLocation.y;
+    var position = this.getMouseLocation(event);
 
     this.context.beginPath();
-    this.context.moveTo(cursorX, cursorY);
-    this.context.lineCap = "round";
-    this.context.lineTo(cursorX, cursorY);
-    this.context.stroke();
+    
+    this.context.lineTo(position.x - this.canvas.offsetLeft, position.y - this.canvas.offsetTop);
+    this.context.stroke(); 
   }
 }
 
-this.OnMouseUp = function() {
+Slate.prototype.onMouseUp = function() {
   this.isDrawing = false;
-  this.currentLocation = this.getMouseLocation(event);
-}
-
-(this.canvas).addEventListener("mousedown", this.onMouseDown.bind(this));
-(this.canvas).addEventListener("mousemove", this.onMouseMove.bind(this));
-
 }
