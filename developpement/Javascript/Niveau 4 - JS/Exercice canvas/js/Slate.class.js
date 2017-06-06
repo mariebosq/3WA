@@ -12,18 +12,21 @@ var Slate = function(pen){
   this.currentLocation = null;
   this.isDrawing = false;
 
-  this.context.lineWidth = 5;
+  this.context.lineWidth = 50;
   // this.context.lineJoin = 'round';
   this.context.lineCap = 'round';
   // this.context.strokeStyle = 'blue';
 
   this.canvas.addEventListener("mousedown", this.onMouseDown.bind(this));
+  this.canvas.addEventListener("mousemove", this.onMouseMove.bind(this));
+  this.canvas.addEventListener("mouseup", this.onMouseUp.bind(this));
+  $("#tool-clear-canvas").on("click", this.clear.bind(this));
 
   this.pen = pen;
 }
 
 Slate.prototype.clear = function(){
-  this.context = clearRect(0,0, this.canvas.width(), this.canvas.height());
+  this.context.clearRect(0,0, this.canvas.width, this.canvas.height);
 }
 
 Slate.prototype.getMouseLocation = function(event){
@@ -38,8 +41,6 @@ Slate.prototype.onMouseDown = function(event){
   var position = this.getMouseLocation(event)
   console.log('Position : ' + position.x + ', ' + position.y)
 
-  this.canvas.addEventListener("mousemove", this.onMouseMove.bind(this));
-  this.canvas.addEventListener("mouseup", this.onMouseUp.bind(this));
   this.isDrawing = true;
   this.pen.configure(this.context);
   this.currentLocation = this.getMouseLocation(event);
@@ -50,9 +51,11 @@ Slate.prototype.onMouseMove = function(event){
     var position = this.getMouseLocation(event);
 
     this.context.beginPath();
-    
+    this.context.moveTo(this.currentLocation.x - this.canvas.offsetLeft, this.currentLocation.y - this.canvas.offsetTop);
     this.context.lineTo(position.x - this.canvas.offsetLeft, position.y - this.canvas.offsetTop);
-    this.context.stroke(); 
+    this.context.stroke();
+
+    this.currentLocation = position;
   }
 }
 
