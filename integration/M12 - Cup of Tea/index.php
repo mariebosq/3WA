@@ -7,7 +7,7 @@
         <!-- CSS Vendor -->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="all" />
         <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+        <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">-->
         <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
         <!-- CSS Perso -->
         <link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
@@ -53,7 +53,7 @@
                         <img src="img/tea/1.jpg" alt="thé noir" class="min">
                         <h3>Thé noir</h3>
                     </li>
-                    <li>
+                    <li class="two">
                         <img src="img/tea/2.jpg" alt="thé vert" class="min">
                         <h3>Thé vert</h3>
                     </li>
@@ -61,7 +61,7 @@
                         <img src="img/tea/3.jpg" alt="Oolong" class="min">
                         <h3>Oolong</h3>
                     </li>
-                    <li>
+                    <li class="two">
                         <img src="img/tea/4.jpg" alt="thé blanc" class="min">
                         <h3>Thé blanc</h3>
                     </li>

@@ -1,0 +1,27 @@
+blog :
+    index.php
+	admin.php
+	src :
+		config :
+			dbConnection.php
+	    controllers : ~
+		queries : ~
+	resources :
+	    js : ~
+		css : ~
+		images : ~
+	templates :
+		index.html.php
+		admin.html.php
+		# et autres pages
+		partials :
+		    head.html.php
+			header.html.php
+			footer.html.php
+			sidebar.html.php
+			adminSidebar.php
+			# et autres
+		forms :
+			newArticle.html.php
+			editArticle.html.php
+			# et autres

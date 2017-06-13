@@ -86,6 +86,11 @@ main {
   margin: 0 auto;
 }
 
+main h1 {
+  text-align: center;
+  color : #90B52C;
+}
+
 main img {
   width: 100%
 }
@@ -143,7 +148,7 @@ main #teas #teas-list h3 {
   margin: 20px auto;
 }
 
-main #teas #teas-list > li {  
+main #teas #teas-list > li {
   text-align: center;
 }
 
@@ -367,11 +372,22 @@ footer #paiement {
   width: 100%;
   padding: 20px;
   background-color: rgba(76, 95, 11,0.25);
+  display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
 }
 
-footer #paiement .fa {
-  display: flex;
-  flex-direction: column;
+footer #paiement a {
+  -webkit-align-self: center;
+	    -ms-flex-item-align: center;
+	            -ms-grid-row-align: center;
+  align-self: center;
+}
+footer #paiement a .fa {
+  display: block;
   text-align: center;
 }
 
@@ -427,4 +443,30 @@ footer h3 {
 
 #licence>a {
   color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%
+  }
+
+  main #presentation {
+    display: block;
+  }
+
+  main #presentation .type {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  footer section {
+    display: block;
+  }
+
+  footer section .pied {
+    width: 100%;
+  }
+
 }

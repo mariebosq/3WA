@@ -1,0 +1,13 @@
+<svg width="400" height="300" xml:lang="fr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+	<title>Styler du texte simplement</title> <!-- cadre -->
+
+	<rect x="0" y="0" width="400" height="300 style=fill:white;"/>
+
+	<text id="ligne1" x="20" y="20">Première ligne de texte en SVG</text>
+
+	<text id="ligne2" x="2" y="100">Seconde ligne</text>
+
+	<text id="ligne3" x="150" y="280">3</text>
+
+</svg>
