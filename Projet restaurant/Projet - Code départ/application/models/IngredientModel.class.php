@@ -1,6 +1,19 @@
 <?php
 
-class IngredientModel {
+
+class IngredientModel
+{
+
+    public function getAll() {
+        $sql = 'SELECT * FROM ingredient';
+        $database = new Database();
+
+        $result = $database->query($sql);
+
+        return $result;
+    }
+
+
 
 	public function create($designation, $type, $stock, $prix, $date_peremption)
 
@@ -44,5 +57,5 @@ class IngredientModel {
         ]);
 
     }
-
+}
    

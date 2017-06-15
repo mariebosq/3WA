@@ -17,10 +17,10 @@ class NewController
     public function httpPostMethod(Http $http, array $formFields)
     {
 
-        //$ing = new IngredientModel();
-        //$ing->create($_POST['designation'], $_POST['type'], $_POST['stock'], $_POST['prix'], $_POST['date_peremption']);
-
-        echo 'formulaire envoyé';
-        die;
+        $ing = new IngredientModel();
+        $ing->create($formFields['designation'], $formFields['type'], $formFields['stock'], $formFields['prix'], $formFields['date_peremption']);
+        
+        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/ingredient/list');
 
     }
+}
