@@ -7,7 +7,16 @@ class DetailsController
         $plat = new PlatModel();
         $p = $plat->get($queryFields['id']);
 
-        return ['plat' => $p ];
+        $plat_ingredient = new PlatIngredientModel();
+
+        $ingredients = $plat_ingredient->getIngredients($queryFields['id']);
+
+        return [
+            'plat' => $p,
+            'ingredients' => $ingredients
+        ];
+
+
     }
 
 }

@@ -2,10 +2,13 @@
 
 	<ul>
 	<?php 
-		//foreach ($listePlats as $plat) {
-
-			echo '<li>' . $plat["nom"] . '</li><li>' . $plat["prix"] . '</li><li>' . $plat["categorie"] . '</li></br>';
-		//}
+			echo '<li>Nom du plat : ' . $plat["nom_plat"] . '</li><li>Prix du plat : ' . $plat["prix"] . '</li><li>Catégorie du plat : ' . $plat["nom_categorie"] . '</li><p>Ingrédients : </p>'; 
+		
+			echo '<ul>';
+			foreach ($ingredients as $ingredient) {
+				echo '<li>' . $ingredient['designation'] . '</li>';
+			}
+			echo '</ul>';
 	?>
 
 	</ul>

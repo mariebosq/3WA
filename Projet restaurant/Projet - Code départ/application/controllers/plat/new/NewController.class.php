@@ -21,19 +21,22 @@ class NewController
     {
         $plat = new PlatModel();
 
+
         $id = $plat->create($formFields['nom'], $formFields['prix'], $formFields['categorie']);
         $plat->get($id);
 
         $ingredients = $formFields['ingredients'];
+        $quantities = $formFields['quantite'];
+
+        $plat_ingredient = new PlatIngredientModel();
 
         foreach($ingredients as $key => $value) {
-            $plat_ingredient = new PlatIngredientModel();
-            $plat_ingredient->create($id, $value);
+            $plat_ingredient->create($id, $value, $quantities);
         }
 
         var_dump($ingredients);
         
-        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/plat/list?id='.$id);
+        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/plat/details?id='.$id);
 
     }
 }

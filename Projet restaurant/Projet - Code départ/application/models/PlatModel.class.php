@@ -4,24 +4,19 @@
 class PlatModel
 
 {
-
     public function get($idPlat) {
-
-        $sql = 'SELECT *
-        FROM plat AS P
-        INNER JOIN categorie AS C ON C.id_categorie = P.categorie
-        WHERE P.id_plat = ?
+        $sql = '
+            SELECT plat.nom AS nom_plat, plat.prix, categorie.nom AS nom_categorie
+            FROM plat
+            INNER JOIN categorie
+            WHERE categorie.id_categorie = plat.categorie
+            AND plat.id_plat = ?
         ';
 
         $database = new Database();
         $result = $database->queryOne($sql, [$idPlat]);
  
- //       var_dump($result);
- //       die;
-
         return $result;
-
-
     }
 
     public function getAll() {
