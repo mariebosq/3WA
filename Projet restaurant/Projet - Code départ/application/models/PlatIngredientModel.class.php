@@ -6,7 +6,7 @@ class PlatIngredientModel
 
     public function getIngredients($id_plat) {
         $sql = '
-            SELECT ingredient.designation
+            SELECT ingredient.designation, table_ingredient_plat.quantite
             FROM ingredient
             INNER JOIN table_ingredient_plat
             WHERE table_ingredient_plat.id_ingredient = ingredient.id_ingredient

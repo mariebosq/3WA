@@ -1,4 +1,4 @@
-<h2>Détails des plats</h2>
+<h2>Détails du plat</h2>
 
 	<ul>
 	<?php 
@@ -6,7 +6,7 @@
 		
 			echo '<ul>';
 			foreach ($ingredients as $ingredient) {
-				echo '<li>' . $ingredient['designation'] . '</li>';
+				echo '<li>' . $ingredient['designation'] . '</li>' . '<li>Quantité : ' . $ingredient['quantite'] . '</li></br>';
 			}
 			echo '</ul>';
 	?>

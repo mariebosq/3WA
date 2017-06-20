@@ -21,17 +21,19 @@ class NewController
     {
         $plat = new PlatModel();
 
+        // var_dump($formFields); die;
 
         $id = $plat->create($formFields['nom'], $formFields['prix'], $formFields['categorie']);
         $plat->get($id);
 
         $ingredients = $formFields['ingredients'];
-        $quantities = $formFields['quantite'];
+        $quantities = $formFields['quantity'];
 
         $plat_ingredient = new PlatIngredientModel();
+        $i = 0;
 
         foreach($ingredients as $key => $value) {
-            $plat_ingredient->create($id, $value, $quantities);
+            $plat_ingredient->create($id, $value, $quantities[$i++]);
         }
 
         var_dump($ingredients);

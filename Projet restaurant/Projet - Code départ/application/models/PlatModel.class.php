@@ -3,7 +3,59 @@
 
 class PlatModel
 
-{
+{   
+    public function getEntree() {
+        $sql = '
+        SELECT nom, id_plat
+        FROM plat
+        WHERE categorie = 1';
+
+        $database = new Database();
+
+        $result = $database->query($sql);
+
+        return $result;
+    }
+
+    public function getPlat() {
+        $sql = '
+        SELECT nom, id_plat
+        FROM plat
+        WHERE categorie = 2';
+
+        $database = new Database();
+
+        $result = $database->query($sql);
+
+        return $result;
+    }
+
+    public function getDessert() {
+        $sql = '
+        SELECT nom, id_plat
+        FROM plat
+        WHERE categorie = 3';
+
+        $database = new Database();
+
+        $result = $database->query($sql);
+
+        return $result;
+    }
+
+    public function getVin() {
+        $sql = '
+        SELECT nom, id_plat
+        FROM plat
+        WHERE categorie = 4';
+
+        $database = new Database();
+
+        $result = $database->query($sql);
+
+        return $result;
+    }
+
     public function get($idPlat) {
         $sql = '
             SELECT plat.nom AS nom_plat, plat.prix, categorie.nom AS nom_categorie
