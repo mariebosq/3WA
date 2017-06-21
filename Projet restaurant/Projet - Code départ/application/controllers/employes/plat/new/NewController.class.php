@@ -38,7 +38,7 @@ class NewController
 
         var_dump($ingredients);
         
-        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/plat/details?id='.$id);
+        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/employes/plat/details?id='.$id);
 
     }
 }

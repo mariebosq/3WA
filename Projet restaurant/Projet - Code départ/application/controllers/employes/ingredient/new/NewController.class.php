@@ -20,7 +20,7 @@ class NewController
         $ing = new IngredientModel();
         $ing->create($formFields['designation'], $formFields['type'], $formFields['stock'], $formFields['prix'], $formFields['date_peremption']);
         
-        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/ingredient/list');
+        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/employes/ingredient/list');
 
     }
 }

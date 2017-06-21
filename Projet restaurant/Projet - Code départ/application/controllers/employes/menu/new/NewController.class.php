@@ -9,15 +9,13 @@ class NewController
         $entrees = $platModel->getEntree();
         $plats = $platModel->getPlat();
         $desserts = $platModel->getDessert();
-        $vins = $platModel->getVin();
 
 
 
         return [
             'listeEntrees' => array_values($entrees),
             'listePlats' => array_values($plats),
-            'listeDesserts' => array_values($desserts),
-            'listeVins' => array_values($vins)
+            'listeDesserts' => array_values($desserts)
         ];
 
 
@@ -29,13 +27,10 @@ class NewController
 
         // var_dump($formFields); die;
 
-        $id = $menu->create($formFields['entree'], $formFields['plat'], $formFields['dessert'], $formFields['nom_menu'], $formFields['prix_menu']);
-
-        $menu->find($id);
-        $i = 0;
-            
+        $id_menu = $menu->create($formFields['entree'], $formFields['plat'], $formFields['dessert'], $formFields['nom_menu'], $formFields['prix_menu']);
+ 
         
-        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/menu/details?id='.$id);
+        header('Location: http://localhost:8888/3WA/Projet%20restaurant/Projet%20-%20Code%20de%CC%81part/index.php/employes/menu/details?id_menu='.$id_menu);
 
     }
 }

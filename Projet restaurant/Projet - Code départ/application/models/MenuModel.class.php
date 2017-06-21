@@ -32,7 +32,7 @@ class MenuModel
 
         $database = new Database();
 
-        $database->executeSql($sql,
+        return $database->executeSql($sql,
 
         [
 
@@ -62,7 +62,7 @@ class MenuModel
 
 
         $sql = 'SELECT
-
+                    
                     *
 
                 FROM menu
@@ -96,5 +96,7 @@ class MenuModel
         return $database->query($sql);
 
     }
+
+   
 
 }

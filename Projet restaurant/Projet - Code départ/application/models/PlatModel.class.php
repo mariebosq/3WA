@@ -3,7 +3,20 @@
 
 class PlatModel
 
-{   
+{
+    public function getPlatByID($id_plat) {
+        $sql = '
+        SELECT * FROM plat
+        WHERE plat.id_plat = ?
+        ';
+
+        $database = new Database();
+
+        $result = $database->queryOne($sql, [$id_plat]);
+
+        return $result;
+    }
+
     public function getEntree() {
         $sql = '
         SELECT nom, id_plat
@@ -16,6 +29,7 @@ class PlatModel
 
         return $result;
     }
+
 
     public function getPlat() {
         $sql = '
@@ -43,18 +57,7 @@ class PlatModel
         return $result;
     }
 
-    public function getVin() {
-        $sql = '
-        SELECT nom, id_plat
-        FROM plat
-        WHERE categorie = 4';
-
-        $database = new Database();
-
-        $result = $database->query($sql);
-
-        return $result;
-    }
+   
 
     public function get($idPlat) {
         $sql = '
