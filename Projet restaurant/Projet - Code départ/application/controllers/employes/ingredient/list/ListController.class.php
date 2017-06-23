@@ -10,8 +10,4 @@ class ListController
         return ['listeIngredients' => array_values($array)];
     }
 
-    public function httpPostMethod(Http $http, array $formFields)
-    {
-
-    }
 }

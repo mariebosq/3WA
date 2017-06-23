@@ -1,0 +1,42 @@
+<div>
+	<h2>Choix des menus</h2>
+	<?php 
+		foreach ($commandes as $commande) {
+
+			echo '<p><input type="checkbox" > ' . $commande["nom_menu"] . '</br>' . $commande["prix_menu"] . ' euros</p>';
+		}
+	?>
+	<h2>Choix des entrées</h2>
+
+		<?php 
+		//var_dump($entrees); die;
+		foreach ($entrees as $entree) {
+
+			echo '<p><input type="checkbox" > ' . $entree["nom"] . '</p>';
+		}
+	?>
+
+	<h2>Choix des plats</h2>
+
+	<?php 
+		//var_dump($entrees); die;
+		foreach ($plats as $plat) {
+
+			echo '<p><input type="checkbox" > ' . $plat["nom"] . '</p>';
+		}
+	?>
+
+	<h2>Choix des desserts</h2>
+
+	<?php 
+		//var_dump($entrees); die;
+		foreach ($desserts as $dessert) {
+
+			echo '<p><input type="checkbox" > ' . $dessert["nom"] . '</p>';
+		}
+	?>
+
+	<input type="submit" name="Ajouter" value="Ajouter au panier">
+
+</div>
+	
