@@ -1,0 +1,7 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+animals_index:
+    path: /animals
+    defaults:  { _controller: AppBundle\Controller\AnimalsController:index }

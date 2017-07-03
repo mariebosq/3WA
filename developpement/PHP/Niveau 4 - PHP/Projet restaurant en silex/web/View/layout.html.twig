@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="{{ asset("normalize-3.0.3.min.css", "css") }}">
+    <link rel="stylesheet" href="{{ asset("main.css", "css") }}">
+    <link rel="stylesheet" href="{{ asset("ui-button.css", "css") }}">
+    <link rel="stylesheet" href="{{ asset("ui-form.css", "css") }}">
+    <link rel="stylesheet" href="{{ asset("ui-table.css", "css") }}">
+    {%block extraCss %}{% endblock %}
+</head>
+<body>
+    <h1>Flickr in Silex :-)</h1>
+
+    {% block main_body %}Ici se trouvera le contenu HTML principal{% endblock %}
+
+    {% block footer %}{% endblock %}
+
+    {%block extraJs %}{% endblock %}
+</body>
+</html>
